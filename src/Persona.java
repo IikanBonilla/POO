@@ -1,15 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Class;
-
-/**
- *
- * @author iikan
- */
 public class Persona {
-    
     //Atributos
     private String nombre,genero;
     private double altura;
@@ -23,48 +13,43 @@ public class Persona {
         this.altura = altura;
         this.edad = edad;
         this.deportes =new Deporte[5];
-    }
-
-  
+    }    
     //Metodo para agregar deportes a personas 
     public void agregarDeporte(Deporte deporte){
-        
         for(int i = 0; i < deportes.length; i++){
             if(deportes[i]== null){
                 deportes[i] = deporte;
                 break;
             }
-        }
-        
-    }
-    
+        }        
+    }    
     //Metodo para remover deportes a personas
-    public void removerDeporte(Deporte deporte){
-        
+    public void removerDeporte(Deporte deporte){       
         for(int i = 0; i < deportes.length; i++){
             if(deportes[i]== deporte){
                 deportes[i] = null;
                 break;
             }
         } 
-    }
-    
+    }    
     //Metodo para mostrar los deportes que juega cada persona
     public void mostrarDeporte(){
         System.out.println("Deporte que juega "+ nombre + ":");
         for (Deporte deporte : deportes){
             if(deporte != null){
                 System.out.println(deporte.getNombre()); 
-            }
-            
+            }          
         }
-    
     }
-
     /*
      * Getters y Setters de los atibutos
      */
-    
+    public Deporte[] getDeportes() {
+        return deportes;
+    }
+    public void setDeportes(Deporte[] deportes) {
+        this.deportes = deportes;
+    }
     public String getNombre() {
         return nombre;
     }
@@ -79,10 +64,6 @@ public class Persona {
 
     public int getEdad() {
         return edad;
-    }
-
-    public Deporte[] getDeportes() {
-        return deportes;
     }
 
     public void setNombre(String nombre) {
@@ -100,10 +81,5 @@ public class Persona {
     public void setEdad(int edad) {
         this.edad = edad;
     }
-
-    public void setDeportes(Deporte[] deportes) {
-        this.deportes = deportes;
-    }
-     
     
 }
