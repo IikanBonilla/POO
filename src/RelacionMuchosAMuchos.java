@@ -6,7 +6,7 @@ public class RelacionMuchosAMuchos {
     public static void main(String[] args) {
        
         //Crear objetos de Persona
-        Persona persona1 = new Persona("iikan","Masculino",1.80,19);
+        Persona persona1 = new Persona("Perisic","Masculino",1.86,34);
         Persona persona2 = new Persona("Laura","Femenino",1.70,17);
         Persona persona3 = new Persona("Maryuri","Masculino",1.75,18);
         Persona persona4 = new Persona("Fabian","Masculino",1.85,18);
